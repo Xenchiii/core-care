@@ -1,0 +1,32 @@
+.tabs{display:flex;gap:.4rem;margin-bottom:.6rem}
+.tabs button{background:var(--si);color:var(--ag);border:var(--px) solid var(--si2);padding:.4rem .9rem;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--cu);color:#1a1209;border-color:#fff;font-weight:bold}
+#night[hidden],#app[hidden]{display:none}
+.nhud{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;margin-bottom:.4rem}
+.nhud b{color:#fff}
+#nClock{font-size:1.3rem;color:var(--cu)}
+.nalert{min-height:1.6em;margin:.5rem 0;font-weight:bold;color:var(--bad)}
+.nalert.on{animation:blink .7s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+.camtabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.4rem}
+.camtabs button{background:var(--si);color:var(--ag);border:var(--px) solid var(--si2);padding:.3rem .7rem;cursor:pointer}
+.camtabs button.on{border-color:var(--ok);color:var(--ok)}
+.feed{position:relative;min-height:230px;background:#050a05;border:var(--px) solid var(--si2);padding:.7rem;color:var(--ok);background-image:repeating-linear-gradient(0deg,rgba(91,200,160,.06) 0 2px,transparent 2px 5px)}
+.feed .dark{display:flex;align-items:center;justify-content:center;min-height:200px;text-align:center;color:var(--si2)}
+.feed.black{background:#000}
+.camhead{display:flex;justify-content:space-between;font-size:.8rem;opacity:.85;margin-bottom:.5rem}
+.clear{opacity:.7}
+.fault{border:var(--px) solid var(--bad);background:rgba(229,88,79,.08);padding:.6rem;margin-bottom:.5rem;color:var(--ag)}
+.fhead{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:bold}
+.fhead svg.px{width:34px;height:34px;color:var(--bad)}
+.fault p{margin:.3rem 0 .5rem;font-size:.85rem}
+.opts{display:grid;gap:.35rem}
+.opts .card{font-size:.85rem}
+.ns .row{margin-top:.6rem}
+.ns .row button[aria-pressed=true]{background:var(--ok);border-color:#fff}
+.nend h2{font-size:1.4rem}
+.nend details{background:var(--si);border:var(--px) solid var(--si2);padding:.2rem .8rem;margin-bottom:.4rem}
+.nend summary{cursor:pointer;padding:.3rem 0;color:#fff}
+.nights{display:flex;gap:.5rem;flex-wrap:wrap;margin:.8rem 0}
+.nights button{min-width:84px}
+.nights button:disabled{opacity:.4;cursor:not-allowed;border-color:var(--si2);box-shadow:none}

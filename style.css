@@ -1,0 +1,56 @@
+:root{--bg:#0f1b2d;--si:#1b2c47;--si2:#243a5c;--cu:#d08a4e;--ag:#c9d1dc;--ok:#5bc8a0;--bad:#e5584f;--warn:#e8b94a;--px:4px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ag);font:15px/1.55 "Courier New",Courier,monospace}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px);z-index:9}
+.cabinet{max-width:720px;margin:0 auto;padding:1.2rem 1rem 3rem}
+h1{margin:0;font-size:2rem;letter-spacing:.1em;color:var(--cu);text-shadow:var(--px) var(--px) 0 #000}
+h2{margin:1.2rem 0 .5rem;font-size:1.05rem;color:var(--cu)}
+header p{margin:.3rem 0 1rem;max-width:56ch}
+button{font:inherit}
+svg.px{width:22px;height:22px;fill:currentColor;display:inline-block;vertical-align:middle}
+.hero{display:flex;gap:.9rem;align-items:center;background:var(--si);border:var(--px) solid var(--si2);padding:.8rem;margin-bottom:1rem}
+.hero svg.px{width:56px;height:56px;color:var(--cu);flex:none}
+.hero div{flex:1}
+.hero b{color:#fff;font-size:1.15rem;display:block}
+.hero small{display:block;opacity:.85;margin-bottom:.3rem}
+.bar{display:block;height:14px;background:#070d18;border:var(--px) solid var(--si2)}
+.bar u{display:block;height:100%;background:var(--ok);transition:width .3s}
+.banner{background:rgba(91,200,160,.12);border:var(--px) solid var(--ok);padding:.7rem;margin-bottom:1rem;color:var(--ok)}
+.region h2{border-bottom:2px dashed var(--si2);padding-bottom:.3rem}
+.nodes{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.5rem}
+.node{text-align:left;background:var(--si);color:var(--ag);border:var(--px) solid var(--cu);padding:.6rem .7rem;cursor:pointer;box-shadow:var(--px) var(--px) 0 #000;min-height:4.2rem}
+.node b{display:block;color:#fff;font-size:.92rem}
+.node small{display:block;margin-top:.2rem;opacity:.85}
+.node.done{border-color:var(--ok)}
+.node.open{border-color:var(--warn)}
+.node:disabled{opacity:.4;cursor:not-allowed;border-color:var(--si2);box-shadow:none}
+.stars svg.px{width:16px;height:16px;color:var(--warn)}
+.stars svg.off,.hearts svg.off{opacity:.2}
+.hearts svg.px{color:var(--bad);margin-left:4px}
+.panel{background:#070d18;border:var(--px) solid var(--ag);box-shadow:0 0 0 var(--px) var(--bg),0 0 0 calc(var(--px)*2) var(--cu),inset 0 0 40px rgba(91,200,160,.12);padding:1rem;margin-top:.8rem}
+.panel h2{margin-top:.2rem;color:#fff}
+.dialog{background:var(--si);border:var(--px) solid var(--si2);padding:.8rem;margin:.8rem 0}
+.dialog small{color:var(--warn)}
+.dialog p{margin:.3rem 0 0}
+.hint{font-size:.82rem;opacity:.8}
+.scroll{margin:.6rem 0 1rem;padding-left:1.5rem}
+.scroll li{margin-bottom:.35rem}
+.scroll li.core::marker{color:var(--ok);font-weight:bold}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+.primary{background:var(--cu);color:#1a1209;font-weight:bold;border:var(--px) solid #fff;padding:.5rem 1rem;cursor:pointer;box-shadow:var(--px) var(--px) 0 #000}
+.primary:active{transform:translate(var(--px),var(--px));box-shadow:none}
+.ghost{background:none;color:var(--ag);border:var(--px) solid var(--ag);padding:.5rem 1rem;cursor:pointer}
+.trialbar{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap}
+.seq{list-style:none;margin:.6rem 0;padding:0;display:grid;gap:.3rem}
+.seq li{border:2px dashed var(--si2);padding:.3rem .6rem;min-height:2.1rem;font-size:.85rem}
+.seq li.filled{border:2px solid var(--ok);color:var(--ok);background:rgba(91,200,160,.08)}
+.hand{display:grid;gap:.4rem}
+.card{background:var(--si);color:var(--ag);border:var(--px) solid var(--cu);padding:.5rem .7rem;text-align:left;cursor:pointer;box-shadow:var(--px) var(--px) 0 #000}
+.card:active{transform:translate(var(--px),var(--px));box-shadow:none}
+.card.used{opacity:.35;cursor:default;border-color:var(--si2);box-shadow:none}
+.card.wrong{border-color:var(--bad);opacity:.55;text-decoration:line-through;box-shadow:none}
+#fb{min-height:3em;margin:.6rem 0 0}
+.good{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+.result h2{font-size:1.4rem}
+:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

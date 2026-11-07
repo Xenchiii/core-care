@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Core Care Quest – System Service Guide Game</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="night.css"></head>
+<body>
+<main class="cabinet">
+ <header><h1>Core Care Quest</h1><p>A mini quest game that is also a complete system service guide. Clear every quest to learn every fix, then survive the night shift.</p></header>
+ <nav class="tabs" aria-label="Game modes">
+  <button data-t="app" aria-pressed="true">Quest map</button>
+  <button data-t="night" aria-pressed="false">Night shift</button>
+ </nav>
+ <div id="app"></div>
+ <div id="night" hidden></div>
+</main>
+<script src="data.js"></script><script src="quest.js"></script><script src="night.js"></script></body></html>
